@@ -1,15 +1,19 @@
 'use strict'
 
 import React, { Component } from 'react'
-import SearchButton from './search-button'
-import LikeButton from './like-button'
 
 class App extends Component {
+  constructor () {
+    super()
+    this.state = {
+      text: 'Amanda'
+    }
+  }
+
   render () {
     return (
-      <div className='container'>
-        <SearchButton />
-        <LikeButton />
+      <div className='container' onClick={() => this.setState({ text: 'outro texto' })}>
+        {this.state.text}
       </div>
     )
   }
